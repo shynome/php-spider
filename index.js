@@ -1,7 +1,9 @@
 // @ts-check
+require('dotenv').config()
+
 const fs = require('fs')
 const request = require('request-promise')
-const baseUrl = 'x'
+const baseUrl = process.env.baseUrl
 
 /**@type {string[]} */
 const files = require('glob').sync('../hermes/*.php').map(path=>path.slice(10))
